@@ -21,6 +21,7 @@ import merge from 'webpack-merge';
 export const generateCommonConfiguration = () => {
     const BUILD_ENV = process.env.BUILD_ENV;
     const IS_DEPLOYING_TO_GITHUB_PAGES = process.env.DEPLOY_TARGET === 'github-pages';
+
     let REPOSITORY_NAME = '';
 
     try {
@@ -62,6 +63,9 @@ export const generateCommonConfiguration = () => {
             resolve: {
                 extensions: ['.mjs', '.js', '.json', '.css', '.m.css', '.png', '.jpg'],
                 modules:    [source, 'node_modules'],
+                alias:      {
+                    'react-dom': '@hot-loader/react-dom',
+                },
             },
             optimization: {
                 nodeEnv: process.env.NODE_ENV,

@@ -56,7 +56,6 @@ export const setupFavicon = () => ({
 export const setupHtml = () => ({
     plugins: [
         new HtmlWebpackPlugin({
-            inject:   false,
             template: HtmlWebpackTemplate,
             title:    'Интенсив по React: персональный проект',
             favicon:  `${statics}/favicon/Lectrum-favicon-512x512.png`,

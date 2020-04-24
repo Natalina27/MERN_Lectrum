@@ -39,7 +39,6 @@ export const loadPostCSS = () => ({
                 cssnano()
             ];
         },
-        sourceMap: true,
     },
 });
 
@@ -51,16 +50,10 @@ export const loadDevelopmentCss = () => ({
                 include: [source, /node_modules/],
                 use:     [
                     {
-                        loader:  'style-loader',
-                        options: {
-                            sourceMap: true,
-                        },
+                        loader: 'style-loader',
                     },
                     {
-                        loader:  'css-loader',
-                        options: {
-                            sourceMap: true,
-                        },
+                        loader: 'css-loader',
                     },
                     loadPostCSS()
                 ],
@@ -78,10 +71,7 @@ export const loadProductionCss = () => ({
                 use:     [
                     MiniCssExtractPlugin.loader,
                     {
-                        loader:  'css-loader',
-                        options: {
-                            sourceMap: true,
-                        },
+                        loader: 'css-loader',
                     },
                     loadPostCSS()
                 ],
