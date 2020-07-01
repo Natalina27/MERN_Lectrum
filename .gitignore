@@ -1,5 +1,5 @@
 # == Core ==
-
+.idea/*
 node_modules/
 build/
 coverage/
