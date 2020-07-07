@@ -1,3 +1,4 @@
 export { MAIN_URL, TOKEN } from './config';
-// export { api } from './api';
-export { api } from './local';
+// source/REST/index.js
+export { api } from './api';
+//export { api } from './local';
